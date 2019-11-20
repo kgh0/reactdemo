@@ -122,7 +122,7 @@ export const Nav00DataSource = {
         className: 'header0-item',
         children: {
           href: '#',
-          children: [{ children: '联系我们吧', name: 'text' }],
+          children: [{ children: '联系我们', name: 'text' }],
         },
       },
     ],
