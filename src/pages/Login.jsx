@@ -17,11 +17,11 @@ class LoginUI extends React.Component {
             debugger;
             if (!err) {
                 if (values.username == "admin" && values.password == '123') {
-                    // window.localStorage.setItem("loggedIn", true);
+                    window.localStorage.setItem("loggedIn", true);
+                    this.props.history.push("/");
                     debugger;
-                    // this.props.history.push("/");
-                    let tmp = this.props.loginClick(values.username, values.password);
-                    console.log(tmp);
+                    // let tmp = this.props.loginClick(values.username, values.password);
+                    // console.log(tmp);
                 } else {
                     message.error("账号密码错误", 1);
                 }
