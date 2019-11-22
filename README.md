@@ -1,4 +1,5 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+架构：react  react-router redux ant-design less Amap(高德)
 
 ## Available Scripts
 
