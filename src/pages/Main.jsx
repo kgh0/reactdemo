@@ -71,7 +71,7 @@ class Main extends React.Component {
 
 const mapStateToProps = (state, ownProps) => {
     debugger;
-    const { isFetching, data, error } = state.HttpEcho;
+    const { isFetching, data, error } = state.main;
     return { isFetching, menu: data, error };
 }
 

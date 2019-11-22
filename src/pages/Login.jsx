@@ -83,7 +83,7 @@ const WrappedNormalLoginForm = Form.create({ name: "normal_login" })(LoginUI);
 
 const mapStateToProps = (state, ownProps) => {
     debugger;
-    const { isFetching, data, error } = state.HttpEcho;
+    const { isFetching, data, error } = state.login;
 
     return {
         isFetching,

@@ -1,6 +1,7 @@
 import fetch from 'cross-fetch';
+import { baseUrl } from "./constant";
 
-export const REQUEST_POSTS = 'REQUEST_POSTS';
+export const REQUEST_POSTS = 'Menu/REQUEST_POSTS';
 
 // 发起请求
 const requestPosts = () => {
@@ -10,7 +11,7 @@ const requestPosts = () => {
 
 };
 
-export const RECEIVE_POSTS = 'RECEIVE_POSTS'
+export const RECEIVE_POSTS = 'Menu/RECEIVE_POSTS'
 
 //通知 reducer 请求成功的 action
 const receviePostOnSuccess = (data) => {
@@ -27,14 +28,14 @@ const receviePostOnError = (message) => {
     }
 }
 
-export const getMenus = (username)=> {
+export const getMenus = (username) => {
     debugger;
     return (dispatch) => {
-        let url = "http://localhost:9080/menu/getMenus/"  ;
+        let url =baseUrl +"/menu/getMenus/";
         dispatch(requestPosts());
-        fetch(url,{
-            method:"Get",
-            mode:"cors"
+        fetch(url, {
+            method: "Get",
+            mode: "cors"
         }).then(rs => rs.json(), error => {
             debugger;
             dispatch(receviePostOnError(error.message));

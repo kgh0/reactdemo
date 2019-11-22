@@ -1,11 +1,11 @@
 import fetch from 'cross-fetch';
-
+import { baseUrl } from "./constant";
 
 // const headers = {
 //     "Content-Type": "application/json; charset=UTF-8"
 // };
 
-export const REQUEST_POSTS = 'REQUEST_POSTS';
+export const REQUEST_POSTS = 'Login/REQUEST_POSTS';
 
 // 发起请求
 const requestPosts = () => {
@@ -15,7 +15,7 @@ const requestPosts = () => {
 
 };
 
-export const RECEIVE_POSTS = 'RECEIVE_POSTS'
+export const RECEIVE_POSTS = 'Login/RECEIVE_POSTS'
 
 //通知 reducer 请求成功的 action
 const receviePostOnSuccess = (data) => {
@@ -36,7 +36,7 @@ const receviePostOnError = (message) => {
 export const getUser = (username, password)=> {
     debugger;
     return (dispatch) => {
-        let url = "http://localhost:9080/user/login/" + username + "/" + password;
+        let url = baseUrl + "/user/login/" + username + "/" + password;
         dispatch(requestPosts());
         fetch(url,{
             method:"Get",
